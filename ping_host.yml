@@ -1,0 +1,9 @@
+- name: Ping
+  hosts: centos
+  become: yes
+
+  tasks:
+
+  - name: Task ping
+    ping:
+

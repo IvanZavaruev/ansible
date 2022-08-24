@@ -1,0 +1,20 @@
+- name: Apt
+  hosts: localhost
+  connection: local
+  become: yes
+
+
+  vars:
+    pakages:
+      - apache2 
+      - tree
+      - htop
+
+  tasks:
+  - name: Task ping
+    ping:
+
+  - name: install programs
+    apt:
+      pkg: "{{ pakages }}"
+      state: present
